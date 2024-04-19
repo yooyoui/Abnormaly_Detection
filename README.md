@@ -1,11 +1,11 @@
 ## 运行测试
 
-  对于client.py，因运行在本地，需在本地安装相应的库
+  对于client.py，因运行在本地，需在本地安装相应的库  
   对于socket server.py, 因运行在云端，需部署ssh并使用云端上的解释器
   
 ## 部署
 
-  对于PyCharm,需要进行如下配置(>工具 中可进行ssh deploy)
+  对于PyCharm,需要进行如下配置(>工具 中可进行ssh deploy)  
   ![ssh deploy](image%20for%20readme/deploy/ssh%20deploy.png)
   ![ssh enterpreter](image%20for%20readme/deploy/ssh%20enterpreter.png)
 
