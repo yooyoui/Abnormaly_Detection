@@ -1,7 +1,7 @@
 ## 运行测试
 
   对于client.py，因运行在本地，需在本地安装相应的库  
-  对于socket server.py, 因运行在云端，需部署ssh并使用云端上的解释器
+  对于socket server.py, 因运行在云端，需部署ssh并使用云端上的解释器（其中，阿里云ecs中已经安装anaconda及相应的库）
   
 ## 部署
 
