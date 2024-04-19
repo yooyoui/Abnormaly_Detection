@@ -6,9 +6,9 @@
 ## 部署
 
   对于PyCharm,需要进行如下配置(>工具 中可进行ssh deploy)
-  
-![image](Anomaly-Detection/image for readme/deploy/ssh deploy.png)
-![image](Anomaly-Detection/image for readme/deploy/ssh enterpreter.png)
+  ![ssh deploy](image%20for%20readme/deploy/ssh%20deploy.png)
+  ![ssh enterpreter](image%20for%20readme/deploy/ssh%20enterpreter.png)
+
   
 ## 使用到的框架
 
