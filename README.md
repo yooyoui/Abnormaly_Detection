@@ -70,12 +70,5 @@ if dtw_score_ > 3:
 
 ## 作者
 
-* **您的名字** - *初始工作* - [yooyoui](https://github.com/yooyoui)
+* **Chan** - *初始工作* - [yooyoui](https://github.com/yooyoui)
 
-## 许可证
-
-  无
-  
-## 致谢
-
-* 感谢您阅读这个README模板！
