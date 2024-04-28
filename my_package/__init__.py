@@ -1,0 +1,3 @@
+from my_package.client_handling import handle_client
+from my_package.data_returned_handing import process_data
+from my_package.data_receive_handing import moving_average, DataProcessor
