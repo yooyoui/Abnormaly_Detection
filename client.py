@@ -4,8 +4,11 @@ import time
 import struct
 
 FILENAME = '../data/56500be4/2022-12-16-00.csv'  # 你要发送的 CSV 文件名
+# 服务器用
 # SERVER_HOST = '47.109.38.244'  # 服务器 IP 或主机名
 # SERVER_PORT = 8000  # 服务器端口
+
+# 本地测试用
 SERVER_HOST = 'localhost'  # 服务器 IP 或主机名
 SERVER_PORT = 12345  # 服务器端口
 

@@ -6,7 +6,11 @@ from my_package.client_handling import handle_client
 from my_package.data_returned_handing import process_data
 
 threads = []
+# 服务器用
+# SERVER_HOST = '47.109.38.244'  # 服务器 IP 或主机名
+# SERVER_PORT = 8000  # 服务器端口
 
+# 本地测试用
 SERVER_HOST = 'localhost'  # 服务器 IP 或主机名
 SERVER_PORT = 12345  # 服务器端口
 
