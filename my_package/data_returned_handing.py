@@ -36,10 +36,10 @@ def process_data(data_queue):
                 result = future.result()
                 # 返回异常状态、处理器描述、当前周期数据（未经裁剪）、异常周期数据（总数据）
                 state, description, local_data, all_data = result
-                # 创建15个子图
-                ax = fig.add_subplot(3, 5, i + 1)
                 abnormal_state_for_all.append(state)
                 if len(local_data) == 2:
+                    # 创建15个子图
+                    ax = fig.add_subplot(3, 5, i + 1)
                     if state:
                         print(f"Abnormal state detected for {description}")
                         ax.axvspan(len(local_data[0]), len(local_data[0]) + len(local_data[1])
