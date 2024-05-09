@@ -21,7 +21,12 @@ def handle_client(client_socket, data_queue):
             print('No data received from client')
             break
 
-        current_save_of_data.append(list(map(int, received_data.decode().split(','))))
+        # 获取client发送数据时的时间戳
+        data_with_timestamp = list(map(float, received_data.decode().split(',')))
+        timestamp = data_with_timestamp[-1]
+        data_without_timestamp = data_with_timestamp[:-1]
+
+        current_save_of_data.append(data_without_timestamp)
         if len(current_save_of_data) > 2000:
             # 采用主轴1的数据判断周期是否完整
             Axis_1 = [row[0] for row in current_save_of_data]
@@ -36,7 +41,7 @@ def handle_client(client_socket, data_queue):
                 while not current_save_of_data:
                     time.sleep(0.5)
                 save_of_data.append(Axis_1.copy())
-                data_queue.put(current_save_of_data.copy())
+                data_queue.put((current_save_of_data.copy(), timestamp))
                 current_save_of_data.clear()
                 continue
     client_socket.close()

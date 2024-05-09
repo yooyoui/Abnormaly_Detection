@@ -122,9 +122,11 @@ class DataProcessor:
             # 计算动态时间规整（DTW）距离
             optimal_path, dtw_score_ = dtw_path(time_series_lst_1_norm, time_series_lst_2_norm)
 
+            # 如果DTW距离大于3，则认为是异常状态（3用作测试，实际应用中应根据实际情况调整）
             if dtw_score_ > 3:
                 self.abnormal_state = True
                 self.abnormal_period_data.append(self.original_data)
-            else:
-                print(f'{self.description} is normal, dtw_score: {dtw_score_}')
+                print(f'{self.description} is abnormal, dtw_score: {dtw_score_}')
+            # else:
+            #     print(f'{self.description} is normal, dtw_score: {dtw_score_}')
 
