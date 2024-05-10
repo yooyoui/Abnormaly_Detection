@@ -7,17 +7,17 @@ from my_package.data_returned_handing import process_data
 
 threads = []
 # 服务器用
-# SERVER_HOST = '47.109.38.244'  # 服务器 IP 或主机名
-# SERVER_PORT = 8000  # 服务器端口
+SERVER_HOST = '172.17.233.120'  # 服务器主私网 IP 或主机名
+SERVER_PORT = 8000  # 服务器端口
 
 # 本地测试用
-SERVER_HOST = 'localhost'  # 服务器 IP 或主机名
-SERVER_PORT = 12345  # 服务器端口
+# SERVER_HOST = 'localhost'  # 服务器 IP 或主机名
+# SERVER_PORT = 12345  # 服务器端口
 
 
 def receive_data(server_host, server_port):
     """
-    :param server_host: 服务器内网IP
+    :param server_host: 服务器 IP
     :param server_port: 服务器端口
     :return: 无
     """

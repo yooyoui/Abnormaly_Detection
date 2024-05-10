@@ -21,12 +21,14 @@ def handle_client(client_socket, data_queue):
             print('No data received from client')
             break
 
-        # 获取client发送数据时的时间戳
+        # 将接收到的数据转换进行拆分
         data_with_timestamp = list(map(float, received_data.decode().split(',')))
-        timestamp = data_with_timestamp[-1]
+        # 去掉时间戳
         data_without_timestamp = data_with_timestamp[:-1]
-
         current_save_of_data.append(data_without_timestamp)
+        # 只保留每个周期的第一个时间戳
+        if len(current_save_of_data) < 2:
+            timestamp = data_with_timestamp[-1]
         if len(current_save_of_data) > 2000:
             # 采用主轴1的数据判断周期是否完整
             Axis_1 = [row[0] for row in current_save_of_data]

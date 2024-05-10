@@ -5,15 +5,15 @@ import struct
 
 FILENAME = 'data/2022-12-16-00.csv'  # 你要发送的 CSV 文件名
 # 服务器用
-# SERVER_HOST = '47.109.38.244'  # 服务器 IP 或主机名
-# SERVER_PORT = 8000  # 服务器端口
+SERVER_HOST = '47.109.38.244'  # 服务器 IP 或主机名
+SERVER_PORT = 8000  # 服务器端口
 
 # 本地测试用
-SERVER_HOST = 'localhost'  # 服务器 IP 或主机名
-SERVER_PORT = 12345  # 服务器端口
+# SERVER_HOST = 'localhost'  # 服务器 IP 或主机名
+# SERVER_PORT = 12345  # 服务器端口
 
 
-def send_row_data(filename, server_host, server_port, delay=0.001):
+def send_row_data(filename, server_host, server_port, delay=0.01):
     """
     发送 CSV 文件中的行数据
     :param filename: 文件名
