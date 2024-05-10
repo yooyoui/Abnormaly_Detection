@@ -25,6 +25,10 @@ def process_data(data_queue):
             print('No data received from queue')
             break
 
+        # 截取一个完整周期所需的时间
+        completed_time_diff = time.time() - timestamp
+        print(f'Completed cycle received at {completed_time_diff} seconds')
+
         # 将各线程的处理结果返回并保存
         with ThreadPoolExecutor(max_workers=15) as executor:
             futures = []  # 保存线程返回结果
@@ -44,8 +48,8 @@ def process_data(data_queue):
                     ax = fig.add_subplot(3, 5, i + 1)
                     if state:
                         # 获取各线程检测到异常状态所需时间
-                        time_diff = time.time() - timestamp
-                        print(f'Abnormal state detected at {time_diff} seconds')
+                        thread_time_diff = time.time() - timestamp
+                        print(f'Abnormal state detected at {thread_time_diff} seconds')
                         # 将异常周期数据添加进子图中
                         ax.axvspan(len(local_data[0]), len(local_data[0]) + len(local_data[1])
                                    , color='red', alpha=0.3, label=f'Abnormal Period')
